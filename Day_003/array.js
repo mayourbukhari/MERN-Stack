@@ -37,9 +37,30 @@ console.log("After Splice (1, 1, 'orange', 'grape'):", fruits);
 
 //joining and concatenating
 // join joins all elements of an array into a string
-// concat merges two or more arrays
 let joinedFruits = fruits.join(", ");
 console.log("Joined Fruits:", joinedFruits);
+
+// concat merges two or more arrays
+// It does not change the existing arrays, but instead returns a new array
 let moreFruits = ["mango", "pineapple"];
 let concatenatedFruits = fruits.concat(moreFruits);
 console.log("Concatenated Fruits:", concatenatedFruits);
+
+// sorting and reversing
+// sort sorts the elements of an array in place and returns the sorted array
+
+let nums = [3, 1, 4, 2];
+nums.sort((a, b) => a - b);
+console.log("Sorted Numbers:", nums);
+fruits.sort();
+console.log("Sorted Fruits:", fruits);
+// reverse reverses the elements of an array in place
+let reversedFruits = fruits.reverse();
+console.log("Reversed Fruits:", reversedFruits);
+
+//adding +1 to every element of the array using map method 
+nums = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// let incrementedNums = nums.map(num => num + 1);
+// console.log("Incremented Numbers:", incrementedNums);
+let evennums = nums.filter(num => num % 2 === 0);
+console.log("Even Numbers:", evennums);
