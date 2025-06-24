@@ -1,23 +1,21 @@
+import { useState } from 'react'
 
-import React from "react";
-import "./App.css";
+export default function App() {
 
-function App() {
-  const arr = [1, 2, 3, 4, 5];
-  return(
-    <div className="app">
-      <h1 className="heading">Welcome to MERN Basics</h1>
-      {arr.map(function(num, index){
-        return (
-          <p key={index}>
-          {num} , {index}
-          Mohsin
-          </p>
-        );
-      })}
-      <p>This project demonstrates a simple MERN setup with Vite for React.</p>
+  return (
+    <div>
+      <h1>this parent componant </h1>
+      <hello/>
     </div>
-  );
+  )
 }
 
-export default App;
+function Hello() {
+  return (
+    <div>
+      <h1>Hello, World!</h1>
+      <p>This is a simple React application.</p>
+    </div>
+  )
+}
+
