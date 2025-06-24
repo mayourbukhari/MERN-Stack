@@ -12,7 +12,8 @@
 // }   
 
 
-
+//higher order function:
+// define a function that takes another function as an argument
 
 
 // //function expression

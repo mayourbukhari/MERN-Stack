@@ -1,5 +1,11 @@
 //objects 
 // objects are a collection of key-value pairs
+// json is a data format that is used to represent objects (methods of json  )
+// In JavaScript, objects are used to store data in a structured way.
+// An object is a collection of properties, where each property is defined as a key-value pair.
+// The key is a string that represents the property name, and the value can be any data type, including other objects, arrays, or functions.
+// Objects are used to represent real-world entities and their attributes.
+// They can be created using object literals, constructor functions, or the Object.create() method
 let student = {
     name: "Mohsin",
     age: 25,
