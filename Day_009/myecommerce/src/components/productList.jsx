@@ -31,17 +31,17 @@ export default function ProductList() {
   return (
     <div>
       <input
-        className="border-amber-200 border-2 bg-blue-200 w-250 h-10"
+        className="border-amber-200 border-2 bg-blue-200 w-250 h-10 rounded-lg p-2 m-5"
         placeholder="search products"
         onChange={onInputChange}
       />
 
       <ul className="flex flex-wrap ">
         {filterProducts.map((product) => (
-          <Link to={product.id}>
-            <li key={product.id} className="shadow-lg w-40 m-4 rounded-2xl">
+          <Link to={`${product.id}`} key={product.id}>
+            <li className="shadow-lg  rounded-2xl w-72 p-5 h-84 m-auto">
               <img src={product.image} alt={product.title} className="h-50" />
-              <h1>{product.title}</h1>
+              <h1 className="text-green-500">{product.title}</h1>
               <p>{product.price}</p>
             </li>
           </Link>
