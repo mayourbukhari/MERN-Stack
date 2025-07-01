@@ -1,15 +1,18 @@
-import React, { useEffect } from "react";
+
+import React, { useState, useEffect } from "react";
 
 export default function Fetch() {
-  const [data, setData] = React.useState(null);
+  const [data, setData] = useState(null);
 
-  async function fetchData() {
-    const response = await fetch("http://localhost:3001/");
-    const data = await response.json();
-    setData(data);
-  }
   useEffect(() => {
-    fetchData();
+ 
+      (async function fetchData() {
+        const response = await fetch("http://localhost:3001/");
+        const data = await response.json();
+        setData(data);
+        console.log("hello");
+      })();
+    
   }, []);
 
   return <div>{data}</div>;

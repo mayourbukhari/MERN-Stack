@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All HTML Tags Showcase</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        section { border: 1px solid #ccc; margin: 1em 0; padding: 1em; }
+        h2 { color: #2c3e50; }
+        code { background: #f4f4f4; padding: 2px 4px; }
+        .inline { display: inline; }
+    </style>
+</head>
+<body>
+    <h1>HTML All Tags Showcase</h1>
+    <p>This page demonstrates most of the commonly used HTML tags. Some obsolete or rarely used tags are omitted for brevity.</p>
+
+    <section>
+        <h2>Text Content</h2>
+        <h1>Heading 1</h1>
+        <h2>Heading 2</h2>
+        <h3>Heading 3</h3>
+        <h4>Heading 4</h4>
+        <h5>Heading 5</h5>
+        <h6>Heading 6</h6>
+        <p>This is a paragraph. <b>Bold</b>, <strong>Strong</strong>, <i>Italic</i>, <em>Emphasized</em>, <mark>Marked</mark>, <small>Small</small>, <del>Deleted</del>, <ins>Inserted</ins>, <sub>Subscript</sub>, <sup>Superscript</sup>, <u>Underline</u>, <s>Strikethrough</s>, <abbr title="HyperText Markup Language">HTML</abbr>, <cite>Citation</cite>, <dfn>Definition</dfn>, <kbd>Ctrl+C</kbd>, <samp>Sample Output</samp>, <var>Variable</var>, <time datetime="2024-06-01">June 1, 2024</time>, <code>code</code>, <q>Short quote</q>, <span>Span</span>.</p>
+        <blockquote cite="https://www.example.com">This is a blockquote.</blockquote>
+        <pre>
+function hello() {
+    console.log("Hello, world!");
+}
+        </pre>
+        <address>
+            Written by John Doe.<br>
+            Visit us at:<br>
+            Example.com<br>
+            Box 564, Disneyland<br>
+            USA
+        </address>
+        <hr>
+    </section>
+
+    <section>
+        <h2>Lists</h2>
+        <ul>
+            <li>Unordered list item 1</li>
+            <li>Unordered list item 2</li>
+        </ul>
+        <ol>
+            <li>Ordered list item 1</li>
+            <li>Ordered list item 2</li>
+        </ol>
+        <dl>
+            <dt>HTML</dt>
+            <dd>HyperText Markup Language</dd>
+            <dt>CSS</dt>
+            <dd>Cascading Style Sheets</dd>
+        </dl>
+    </section>
+
+    <section>
+        <h2>Links and Media</h2>
+        <a href="https://www.example.com" target="_blank">This is a link</a><br>
+        <img src="https://via.placeholder.com/100" alt="Placeholder Image"><br>
+        <figure>
+            <img src="https://via.placeholder.com/150" alt="Figure Image">
+            <figcaption>This is a figure caption.</figcaption>
+        </figure>
+        <audio controls>
+            <source src="sample.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <br>
+        <video width="200" controls>
+            <source src="sample.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <br>
+        <embed src="https://www.example.com" width="200" height="50">
+        <br>
+        <object data="https://www.example.com" width="200" height="50"></object>
+        <br>
+        <iframe src="https://www.example.com" width="200" height="50"></iframe>
+        <br>
+        <picture>
+            <source srcset="https://via.placeholder.com/150/0000FF" media="(min-width: 600px)">
+            <img src="https://via.placeholder.com/150" alt="Picture element">
+        </picture>
+        <br>
+        <map name="samplemap">
+            <area shape="rect" coords="0,0,50,50" href="https://www.example.com" alt="Area">
+        </map>
+        <img src="https://via.placeholder.com/100" usemap="#samplemap" alt="Image map">
+    </section>
+
+    <section>
+        <h2>Tables</h2>
+        <table border="1">
+            <caption>Sample Table</caption>
+            <thead>
+                <tr>
+                    <th>Header 1</th>
+                    <th>Header 2</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Cell 1</td>
+                    <td>Cell 2</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="2">Footer</td>
+                </tr>
+            </tfoot>
+        </table>
+    </section>
+
+    <section>
+        <h2>Forms</h2>
+        <form>
+            <fieldset>
+                <legend>Sample Form</legend>
+                <label for="text">Text:</label>
+                <input type="text" id="text" name="text"><br>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password"><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email"><br>
+                <label for="number">Number:</label>
+                <input type="number" id="number" name="number"><br>
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date"><br>
+                <label for="color">Color:</label>
+                <input type="color" id="color" name="color"><br>
+                <label for="file">File:</label>
+                <input type="file" id="file" name="file"><br>
+                <label for="range">Range:</label>
+                <input type="range" id="range" name="range"><br>
+                <label for="checkbox">Checkbox:</label>
+                <input type="checkbox" id="checkbox" name="checkbox"><br>
+                <label for="radio1">Radio 1:</label>
+                <input type="radio" id="radio1" name="radio"><br>
+                <label for="radio2">Radio 2:</label>
+                <input type="radio" id="radio2" name="radio"><br>
+                <label for="select">Select:</label>
+                <select id="select" name="select">
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                </select><br>
+                <label for="textarea">Textarea:</label>
+                <textarea id="textarea" name="textarea"></textarea><br>
+                <button type="submit">Submit</button>
+                <input type="reset" value="Reset">
+            </fieldset>
+        </form>
+        <datalist id="browsers">
+            <option value="Chrome">
+            <option value="Firefox">
+            <option value="Safari">
+            <option value="Edge">
+        </datalist>
+        <output name="result" for="number range">0</output>
+        <progress value="50" max="100"></progress>
+        <meter value="0.6">60%</meter>
+    </section>
+
+    <section>
+        <h2>Semantic Elements</h2>
+        <header>Header Section</header>
+        <nav>
+            <a href="#">Home</a> |
+            <a href="#">About</a>
+        </nav>
+        <main>
+            <article>
+                <h3>Article Title</h3>
+                <p>Article content...</p>
+            </article>
+            <aside>
+                <p>Aside content...</p>
+            </aside>
+            <section>
+                <p>Nested Section</p>
+            </section>
+        </main>
+        <footer>Footer Section</footer>
+    </section>
+
+    <section>
+        <h2>Script and Style</h2>
+        <style>
+            .styled { color: red; }
+        </style>
+        <p class="styled">This text is styled with internal CSS.</p>
+        <script>
+            // Simple script
+            document.querySelector('output').value = 42;
+        </script>
+        <noscript>Your browser does not support JavaScript!</noscript>
+    </section>
+
+    <section>
+        <h2>Other Tags</h2>
+        <details>
+            <summary>Click to expand</summary>
+            <p>Details content...</p>
+        </details>
+        <dialog open>This is a dialog.</dialog>
+        <template>
+            <p>This is a template content.</p>
+        </template>
+        <canvas id="myCanvas" width="100" height="50" style="border:1px solid #000000;"></canvas>
+        <svg width="100" height="50">
+            <rect width="100" height="50" style="fill:blue;" />
+        </svg>
+        <br>
+        <bdi>שלום</bdi>
+        <bdo dir="rtl">This text is right-to-left.</bdo>
+        <wbr>
+        <ruby>
+            漢 <rt>Kan</rt>
+        </ruby>
+    </section>
+</body>
+</html>

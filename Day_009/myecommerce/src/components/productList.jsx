@@ -18,7 +18,7 @@ export default function ProductList() {
   useEffect(function () {
     getProducts();
     console.log(products);
-  }, []);
+  }, [products]);
 
   function onInputChange(e) {
     setInput(e.target.value);
@@ -31,10 +31,15 @@ export default function ProductList() {
   return (
     <div>
       <input
-        className="border-amber-200 border-2 bg-blue-200 w-250 h-10 rounded-lg p-2 m-5"
+        className="border-amber-200 border-2 bg-blue-200"
         placeholder="search products"
         onChange={onInputChange}
       />
+      <select>
+        <option>Select </option>
+        <option>High to low</option>
+        <option> low to high</option>
+      </select>
 
       <ul className="flex flex-wrap ">
         {filterProducts.map((product) => (

@@ -12,7 +12,7 @@ export default function App() {
     <div>
       <BrowserRouter>
         <Routes>
-          <Rout path="/fetch" element={<Fetch />} />
+          <Route path="/fetch" element={<Fetch />} />
           <Route path="/" element={<Signup />} />
           <Route path="/signin" element={<Signin />} />
 

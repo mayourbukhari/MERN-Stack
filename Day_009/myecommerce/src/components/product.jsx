@@ -1,25 +1,27 @@
-import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 
-export default function ProductList() {
-  const [products, setProducts] = useState([]);
+export default function Product() {
+  const [product, setProduct] = useState({});
+  const { id } = useParams();
 
+  const fetchProduct = async () => {
+    let response = await axios(`https://fakestoreapi.com/products/${id}`);
+    setProduct(response.data);
+    console.log(product);
+  };
   useEffect(() => {
-    axios("https://fakestoreapi.com/products").then((res) => setProducts(res.data));
+    fetchProduct();
   }, []);
 
   return (
-    <div className="flex flex-wrap">
-      {products.map((product) => (
-        <Link to={`/products/${product.id}`} key={product.id}>
-          <li className="shadow-lg w-40 m-4 rounded-2xl list-none">
-            <img src={product.image} alt={product.title} className="h-50" />
-            <h1>{product.title}</h1>
-            <p>{product.price}</p>
-          </li>
-        </Link>
-      ))}
+    <div>
+      <li key={product.id} className="shadow-lg w-40 m-4 rounded-2xl">
+        <img src={product.image} alt={product.title} className="h-50" />
+        <h1>{product.title}</h1>
+        <p>{product.price}</p>
+      </li>
     </div>
   );
 }
