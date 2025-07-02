@@ -1,0 +1,107 @@
+<!-- client/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Fullstack App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .container {
+      background: white;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      text-align: center;
+      max-width: 500px;
+      width: 90%;
+    }
+    h1 {
+      color: #333;
+      margin-bottom: 20px;
+      font-size: 2.5em;
+    }
+    #message {
+      font-size: 1.5em;
+      color: #555;
+      background: #f8f9fa;
+      padding: 20px;
+      border-radius: 10px;
+      border-left: 5px solid #667eea;
+      margin: 20px 0;
+    }
+    .loading {
+      color: #667eea;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0% { opacity: 1; }
+      50% { opacity: 0.5; }
+      100% { opacity: 1; }
+    }
+    .error {
+      color: #e74c3c;
+      background: #ffeaea;
+      border-left-color: #e74c3c;
+    }
+    .success {
+      color: #27ae60;
+      background: #eafaf1;
+      border-left-color: #27ae60;
+    }
+    button {
+      background: #667eea;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 25px;
+      cursor: pointer;
+      font-size: 1em;
+      margin-top: 20px;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background: #5a6fd8;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🚀 Fullstack Demo</h1>
+    <p id="message" class="loading">Loading message from server...</p>
+    <button onclick="fetchMessage()">Refresh Message</button>
+  </div>
+
+  <script>
+    function fetchMessage() {
+      const messageElement = document.getElementById('message');
+      messageElement.innerText = 'Loading message from server...';
+      messageElement.className = 'loading';
+      
+      fetch('http://localhost:5000/getmessage')
+        .then(res => res.json())
+        .then(data => {
+          messageElement.innerText = data.message;
+          messageElement.className = 'success';
+        })
+        .catch(err => {
+          messageElement.innerText = 'Error: Could not connect to server. Make sure the server is running!';
+          messageElement.className = 'error';
+          console.error('Fetch error:', err);
+        });
+    }
+
+    // Load message when page loads
+    fetchMessage();
+  </script>
+</body>
+</html>

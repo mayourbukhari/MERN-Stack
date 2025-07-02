@@ -1,0 +1,7 @@
+create simple fullstack setup 
+
+server: 
+create api(/getmessage ) in server -- hello world
+
+client:
+create frontend and make the request to the api you have created and displat the api response on the webpage.
