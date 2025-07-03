@@ -70,7 +70,7 @@ This is a full-stack weather application that uses the OpenWeather API to fetch 
 
 #### Get weather by city:
 ```
-GET http://localhost:3001/weather/London
+GET http://localhost:3001/weather/Punjab
 ```
 
 #### Get weather by coordinates:
@@ -98,7 +98,7 @@ GET http://localhost:3001/weather/coordinates/51.5074/-0.1278
 Create a `.env` file in the backend directory with:
 
 ```
-OPENWEATHER_API_KEY=your_openweather_api_key
+API_KEY=your_openweather_api_key
 ```
 
 ## Error Handling
